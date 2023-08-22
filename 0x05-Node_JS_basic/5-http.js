@@ -10,8 +10,10 @@ const app = http.createServer((req, res) => {
     case '/students':
       countStudents('database.csv');
       res.end('This is the list of our students');
+      break;
     case '/':
       res.end('Hello Holberton School!');
+      break;
   }
 }).listen(port);
 
