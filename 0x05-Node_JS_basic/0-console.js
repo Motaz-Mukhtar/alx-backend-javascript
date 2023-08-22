@@ -1,5 +1,5 @@
 
-function displayMessage (string) {
+const displayMessage = (string) {
   console.log(string);
 }
 
