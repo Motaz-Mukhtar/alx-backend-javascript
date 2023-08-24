@@ -4,8 +4,9 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 
 describe('sendPaymentRequestToApi', function () { 
-  it ('should return same value of calculatNumber', function () {
-    utilsSpy = sinon.spy(Utils, 'calculateNumber');
+  const utilsSpy = sinon.spy(Utils, 'calculateNumber');
+
+  it('should return same value of calculatNumber', function () {
     sendPaymentRequestToApi(100, 20);
 
     expect(utilsSpy.calledOnce).to.be.true;
