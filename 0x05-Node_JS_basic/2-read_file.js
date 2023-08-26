@@ -10,13 +10,13 @@ function countStudents(path) {
     .filter((student) => student.length === 4 && student[0] !== 'firstname');
 
   const obj = {
-    firstname: 0, lastname: 1, age: 2, filed: 3,
+    firstname: 0, lastname: 1, age: 2, field: 3,
   };
 
   const csStudents = [];
   const sweStudents = [];
   for (const student of students) {
-    if (student[obj.filed] === 'CS') { csStudents.push(student[obj.firstname]); } else if (student[obj.filed] === 'SWE') { sweStudents.push(student[obj.firstname]); }
+    if (student[obj.field] === 'CS') { csStudents.push(student[obj.firstname]); } else if (student[obj.field] === 'SWE') { sweStudents.push(student[obj.firstname]); }
   }
 
   console.log(`Number of students: ${students.length}`);
