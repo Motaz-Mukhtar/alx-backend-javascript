@@ -1,3 +1,3 @@
 export default function returnHowManyArguments(...argArr) {
-	return argArr.length
+  return argArr.length;
 }
