@@ -6,16 +6,14 @@ export default async function asyncUploadUser() {
     user: null,
   };
 
-  uploadPhoto()
-  .then(value => userData.photo = value)
-  .catch(err => { return userData });
+  try {
+    const photo = await uploadPhoto();
+    const user = await createUser();
 
-  createUser()
-  .then(value => userData.user = value)
-  .catch(err => {
-    userData.phtot = null;
-    return userData;
-  });
+    return Promise.resolve({ photo, user });
+  } catch (err) {
+    return { photo: null, user: null };
+  }
 
   return userData;
 }
