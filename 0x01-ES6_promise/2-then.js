@@ -1,7 +1,7 @@
 export default function handleResponseFromAPI(promise) {
   const data = {
     status: 200,
-    body: 'sucess',
+    body: 'success',
   };
 
   return promise
